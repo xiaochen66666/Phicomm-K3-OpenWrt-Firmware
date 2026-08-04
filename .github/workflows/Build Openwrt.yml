@@ -30,7 +30,9 @@ env:
 jobs:
   Build:
     runs-on: ubuntu-22.04
-
+    permissions:
+      contents: write          # 允许创建 Release 和上传文件
+    
     steps:
     - name: 检验服务器性能 - Check Server Performance
       run: |
