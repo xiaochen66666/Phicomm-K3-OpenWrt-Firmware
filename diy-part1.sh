@@ -29,12 +29,6 @@ rm -rf package/lean/k3screenctrl
 git clone https://github.com/JE668/k3screenctrl_build.git package/lean/k3screenctrl/
 echo '=========Replace k3screen drive plug OK!========='
 
-#1.'asus_dhd24' 2.'ac88u_20' 3.'69027'
-firmware='69027'
-echo '替换无线驱动'
-wget -nv https://github.com/JE668/Phicomm-k3-Wireless-Firmware/raw/master/brcmfmac4366c-pcie.bin.${firmware} -O package/lean/k3-brcmfmac4366c-firmware/files/lib/firmware/brcm/brcmfmac4366c-pcie.bin
-echo '=========Replace k3 wireless firmware OK!========='
-
 echo '添加OpenClash'
 rm -rf package/lean/luci-app-openclash
 mkdir package/luci-app-openclash
