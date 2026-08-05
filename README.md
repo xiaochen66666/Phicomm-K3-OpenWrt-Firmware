@@ -2,7 +2,7 @@
 # Phicomm K3 OpenWrt Firmware 🚀
 本项目提供了针对 Phicomm K3 路由器的 OpenWrt 固件，旨在提供更多功能和定制选项。
 
-后台地址：[10.0.0.1](http://10.0.0.1)
+后台地址：[192.168.2.1](http://192.168.2.1)
 
 固件基于 Lean 的 [OpenWrt](https://github.com/coolsnowwolf/lede) 源码，并整合了以下主要插件及功能。
 
