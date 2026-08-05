@@ -12,12 +12,10 @@
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generate
 
-# 取消Lean大登陆密码
-sed -i 's/^\(.*99999\)/#&/' package/lean/default-settings/files/zzz-default-settings
 
 # 修改root密码
-# password=$(openssl passwd -1 'admin')
-# sed -i "s|root::0:0:99999:7:::|root:$password:0:0:99999:7:::|g" package/base-files/files/etc/shadow
+password=$(openssl passwd -1 'admin')
+sed -i "s|root::0:0:99999:7:::|root:$password:0:0:99999:7:::|g" package/base-files/files/etc/shadow
 
 # 修改默认wifi名称ssid为OpenWrt
 # sed -i 's/ssid=OpenWrt/ssid=OpenWrt/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
