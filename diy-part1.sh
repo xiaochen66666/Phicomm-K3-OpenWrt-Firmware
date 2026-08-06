@@ -14,10 +14,6 @@
 # sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
 #1.'asus_dhd24' 2.'ac88u_20' 3.'69027'
-echo '添加AdguardHome'
-
-git clone https://github.com/kongfl888/luci-app-adguardhome package/lean/luci-app-adguardhome 
-echo '=========Add AdguardHome OK!========='
 
 echo '添加lwz322的K3屏幕插件'
 rm -rf package/lean/luci-app-k3screenctrl
@@ -29,16 +25,11 @@ rm -rf package/lean/k3screenctrl
 git clone https://github.com/JE668/k3screenctrl_build.git package/lean/k3screenctrl/
 echo '=========Replace k3screen drive plug OK!========='
 
-echo '添加OpenClash'
-rm -rf package/lean/luci-app-openclash
-mkdir package/luci-app-openclash
-cd package/luci-app-openclash
-git init
-git remote add -f origin https://github.com/vernesong/OpenClash.git
-git config core.sparsecheckout true
-echo "luci-app-openclash" >> .git/info/sparse-checkout
-git pull --depth 1 origin master
-git branch --set-upstream-to=origin/master master
+echo '添加kenzok8 small-package'
+echo 'src-git small https://github.com/kenzok8/small' >>feeds.conf.default
+echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >>feeds.conf.default
+echo '=========Add kenzok8 source OK!========='
+
 echo '=========Add OpenClash source OK!========='
 
 
